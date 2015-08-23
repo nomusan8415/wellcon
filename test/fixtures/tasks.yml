@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  device_id: 1
+  name: MyString
+  start_time: 2015-08-23 14:53:05
+  stop_time: 2015-08-23 14:53:05
+  comment: MyText
+
+two:
+  device_id: 1
+  name: MyString
+  start_time: 2015-08-23 14:53:05
+  stop_time: 2015-08-23 14:53:05
+  comment: MyText
