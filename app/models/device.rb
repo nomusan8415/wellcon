@@ -37,11 +37,12 @@ class Device < ActiveRecord::Base
     end
   end
 
-
+=begin
 def self.state_choices
   [["ON","ON"],
    ["OFF","OFF"],
    ["OTHER","OTHER"]]
 end
+=end
 
 end
