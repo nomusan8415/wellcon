@@ -2,7 +2,8 @@
 <div class="page-header">
   <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
 </div>
-<table class="table table-striped table-bordered table-hover">
+<div align="center">
+<table class="table table-striped table-bordered table-hover" >
   <thead>
     <tr>
       <th><%= model_class.human_attribute_name(:id) %></th>
@@ -19,7 +20,7 @@
       <tr>
         <td><%= link_to device.id, device_path(device) %></td>
         <td><%= device.name %></td>
-        <td><%= device.state %></td>
+        <td class="success"><%= device.state %></td>
         <td><%= device.comment %></td>
         <td><%= device.polling_time %></td>
         <td><%=l device.created_at %></td>
@@ -36,7 +37,9 @@
     <% end %>
   </tbody>
 </table>
+</div>
 
 <%= link_to t('.new', :default => t("helpers.links.new")),
             new_device_path,
             :class => 'btn btn-primary' %>
+

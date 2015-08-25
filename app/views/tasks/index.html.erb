@@ -2,7 +2,7 @@
 
 <h1>Listing Tasks</h1>
 
-<table>
+<table class="table table-striped table-bordered table-hover">
   <thead>
     <tr>
       <th>Device</th>
@@ -10,7 +10,7 @@
       <th>Start time</th>
       <th>Stop time</th>
       <th>Comment</th>
-      <th colspan="3"></th>
+      <th colspan="3">Actions</th>
     </tr>
   </thead>
 
@@ -22,9 +22,12 @@
         <td><%= task.start_time %></td>
         <td><%= task.stop_time %></td>
         <td><%= task.comment %></td>
-        <td><%= link_to 'Show', task %></td>
-        <td><%= link_to 'Edit', edit_task_path(task) %></td>
-        <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', task, :class => 'btn btn-primary btn-xs' %></td>
+        <td><%= link_to 'Edit', edit_task_path(task), :class => 'btn btn-info btn-xs'%></td>
+        <td><%= link_to 'Destroy', task, 
+			method: :delete, 
+			data: { confirm: 'Are you sure?' },
+			:class => 'btn btn-xs btn-danger' %></td>
       </tr>
     <% end %>
   </tbody>
@@ -32,4 +35,4 @@
 
 <br>
 
-<%= link_to 'New Task', new_task_path %>
+<%= link_to 'New Task', new_task_path ,class:"btn btn-primary"%>
